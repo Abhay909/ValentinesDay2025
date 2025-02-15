@@ -165,7 +165,9 @@ loveMeter.addEventListener('input', () => {
 const photoBoothVideo = document.getElementById('photoBoothVideo');
 const photoCanvas = document.getElementById('photoCanvas');
 const capturePhotoButton = document.getElementById('capturePhoto');
+const downloadPhotoButton = document.getElementById('downloadPhoto');
 
+// Access the camera and mirror the video
 navigator.mediaDevices.getUserMedia({ video: true })
   .then((stream) => {
     photoBoothVideo.srcObject = stream;
@@ -174,7 +176,29 @@ navigator.mediaDevices.getUserMedia({ video: true })
     console.error('Error accessing camera:', error);
   });
 
+// Capture Photo
 capturePhotoButton.addEventListener('click', () => {
   const ctx = photoCanvas.getContext('2d');
+
+  // Mirror the captured photo
+  ctx.translate(photoCanvas.width, 0);
+  ctx.scale(-1, 1);
+
+  // Draw the video frame onto the canvas
   ctx.drawImage(photoBoothVideo, 0, 0, photoCanvas.width, photoCanvas.height);
+
+  // Reset the transformation
+  ctx.setTransform(1, 0, 0, 1, 0, 0);
+
+  // Show the canvas and download button
+  photoCanvas.style.display = 'block';
+  downloadPhotoButton.style.display = 'block';
+});
+
+// Download Photo
+downloadPhotoButton.addEventListener('click', () => {
+  const link = document.createElement('a');
+  link.download = 'valentine-photo.png';
+  link.href = photoCanvas.toDataURL('image/png');
+  link.click();
 });
