@@ -1,4 +1,3 @@
- 
 # Valentine's Day 2025
 
 ## Project Overview
@@ -34,3 +33,11 @@ To set up the project locally, follow these steps:
 To run the project locally, use the following command:
 ```sh
 npm start
+Live Demo
+Check out the live demo here.
+
+Contributing
+Contributions are welcome! Please open an issue or submit a pull request.
+
+License
+This project is licensed under the MIT License.
