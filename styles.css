@@ -369,8 +369,57 @@ footer {
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
 }
 
-/*
+/* Contact Form Styling */
+form[name="contact"] {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px solid #f07c82;
+  border-radius: 10px;
+  background-color: #fff0f5;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
+form[name="contact"] p {
+  margin-bottom: 15px;
+}
+
+form[name="contact"] label {
+  font-size: 1.2em;
+  color: #333;
+}
+
+form[name="contact"] input[type="text"],
+form[name="contact"] input[type="email"],
+form[name="contact"] textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+form[name="contact"] textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+form[name="contact"] button[type="submit"] {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #f07c82;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form[name="contact"] button[type="submit"]:hover {
+  background-color: #d66a70;
+}
 
 
 
