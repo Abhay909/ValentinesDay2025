@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Valentine's Day, Mom! ❤️</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Background Music with Mute Button -->
+  <audio id="bgMusic" autoplay loop>
+    <source src="assets/audio/background-music.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <button id="muteButton" class="mute-button">🔇 Mute</button>
+
+  <div class="container">
+    <!-- Header Section -->
+    <header>
+      <h1>Happy Valentine's Day, Mom! ❤️</h1>
+      <p>You mean the world to me. Here's a little something to show how much I love you!</p>
+    </header>
+
+    <!-- Interactive Heart Button -->
+    <div class="heart-button-container">
+      <button id="heartButton" class="surprise-button">Click for a Surprise!</button>
+    </div>
+
+    <!-- Heart Rain Animation -->
+    <div id="heartRain"></div>
+
+    <!-- Image Slider -->
+    <div class="slider">
+      <h2>Our Favorite Moments</h2>
+      <div class="slider-container">
+        <!-- Active Slide -->
+        <div class="slide active">
+          <img src="assets/images/photo1.jpg" alt="Photo 1">
+        </div>
+        <!-- Inactive Slides -->
+        <div class="slide">
+          <img src="assets/images/photo2.jpg" alt="Photo 2">
+        </div>
+        <div class="slide">
+          <img src="assets/images/photo3.jpg" alt="Photo 3">
+        </div>
+        <div class="slide">
+          <img src="assets/images/photo4.jpg" alt="Photo 4">
+        </div>
+        <div class="slide">
+          <img src="assets/images/photo5.jpg" alt="Photo 5">
+        </div>
+        <div class="slide">
+          <img src="assets/images/photo6.jpg" alt="Photo 6">
+        </div>
+        <div class="slide">
+          <img src="assets/images/photo7.jpg" alt="Photo 7">
+        </div>
+        <div class="slide">
+          <img src="assets/images/photo8.jpg" alt="Photo 8">
+        </div>
+        <div class="slide">
+          <img src="assets/images/photo9.jpg" alt="Photo 9">
+        </div>
+        <div class="slide">
+          <img src="assets/images/photo10.jpg" alt="Photo 10">
+        </div>
+      </div>
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+    </div>
+
+    <!-- Video Carousel -->
+    <div class="carousel">
+      <h2>Our Special Videos</h2>
+      <div class="carousel-container">
+        <!-- Active Video -->
+        <div class="video-slide active">
+          <video controls>
+            <source src="assets/videos/video1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <!-- Inactive Videos -->
+        <div class="video-slide">
+          <video controls>
+            <source src="assets/videos/video2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="video-slide">
+          <video controls>
+            <source src="assets/videos/video3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="video-slide">
+          <video controls>
+            <source src="assets/videos/video4.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+      <button class="prev-video">&#10094;</button>
+      <button class="next-video">&#10095;</button>
+    </div>
+
+    <!-- Love Message Generator -->
+    <div class="message-generator">
+      <h2>Generate a Love Message</h2>
+      <button id="generateMessage" class="love-message-button">Click Me!</button>
+      <p id="loveMessage"></p>
+    </div>
+
+    <!-- Interactive Stuff Section -->
+    <div class="interactive-stuff">
+      <h2>More Fun Stuff!</h2>
+      <div class="interactive-grid">
+        <!-- Heart Drawing -->
+        <div class="interactive-item">
+          <h3>Draw a Heart</h3>
+          <canvas id="heartCanvas" width="200" height="200"></canvas>
+          <button id="clearCanvas">Clear</button>
+        </div>
+
+        <!-- Love Meter -->
+        <div class="interactive-item">
+          <h3>Love Meter</h3>
+          <p>How much do you love Mom?</p>
+          <input type="range" id="loveMeter" min="0" max="100" value="50">
+          <p id="loveMeterValue">50%</p>
+        </div>
+
+        <!-- Photo Booth -->
+        <div class="interactive-item">
+          <h3>Photo Booth</h3>
+          <p>Take a photo with Mom!</p>
+          <video id="photoBoothVideo" width="200" height="200" autoplay></video>
+          <button id="capturePhoto">Capture Photo</button>
+          <canvas id="photoCanvas" width="200" height="200"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>Made with ❤️ by [Your Name]</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
