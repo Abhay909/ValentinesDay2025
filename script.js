@@ -94,7 +94,7 @@ const messages = [
   "Poshi poshi poshi, poshi poshi yee",
   "Mammai is the best mammai in the world",
   "Happy Valentines day mammoi",
-  "Did you know I didnt do much in robotics today?", 
+  "Robotics was so fun Today!", 
   "Mammaoi, mammoi, chi-la-la-la",
   "Mammai is so awesome, oooo waa waa ooo wah, mammai is a possum.",
   "Please explain to me why you are so awesome",
