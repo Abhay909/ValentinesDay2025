@@ -256,6 +256,14 @@ footer {
   background: #fff;
 }
 
+/* Photo Booth */
+#photoBoothVideo, #photoCanvas {
+  border: 2px solid #e63946;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background: #fff;
+}
+
 /* Heart Rain Animation */
 @keyframes heartFall {
   0% { transform: translateY(-100px) rotate(0deg); }

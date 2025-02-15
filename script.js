@@ -64,6 +64,12 @@ const videoSlides = document.querySelectorAll('.video-slide');
 const totalVideoSlides = videoSlides.length;
 
 function showVideoSlide(index) {
+  // Pause the current video
+  const currentVideo = document.querySelector('.video-slide.active video');
+  if (currentVideo) {
+    currentVideo.pause();
+  }
+
   // Hide all videos
   videoSlides.forEach((video) => video.classList.remove('active'));
   // Show the current video
@@ -82,21 +88,39 @@ document.querySelector('.next-video').addEventListener('click', () => {
 
 // Love Message Generator
 const messages = [
-  "You are the best mom in the world!",
-  "I love you to the moon and back!",
-  "Thank you for always being there for me.",
-  "You make every day brighter!",
-  "I’m so grateful to have you in my life.",
+  "I will always swashi until the end of time",
+  "Just remebember that I poshi u infinity percent",
+  "I love my mammai, she is so beautiful",
+  "Poshi poshi poshi, poshi poshi yee",
+  "Mammai is the best mammai in the world",
+  "Happy Valentines day mammoi",
+  "Did you know I didnt do much in robotics today?", 
+  "Mammaoi, mammoi, chi-la-la-la",
+  "Mammai is so awesome, oooo waa waa ooo wah, mammai is a possum.",
+  "Please explain to me why you are so awesome",
+  "I love you so much mammai",
+  "I love you more than anything in the world",
 ];
 
 const generateMessage = document.getElementById('generateMessage');
 const loveMessage = document.getElementById('loveMessage');
+let messageTimeout = null; // To track the timeout
 
 generateMessage.addEventListener('click', () => {
+  // Clear any existing timeout
+  if (messageTimeout) {
+    clearTimeout(messageTimeout);
+  }
+
+  // Generate a random message
   const randomMessage = messages[Math.floor(Math.random() * messages.length)];
   loveMessage.textContent = randomMessage;
+
+  // Fade in the message
   loveMessage.style.opacity = 1;
-  setTimeout(() => {
+
+  // Fade out the message after 3 seconds
+  messageTimeout = setTimeout(() => {
     loveMessage.style.opacity = 0;
   }, 3000);
 });
